@@ -1,0 +1,568 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  color: var(--primary-color) !important;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/*==== Variable Define ====*/
+:root {
+  --primary-color: #127475;
+  --secondry-color: #003249;
+  --third-color: #089696;
+  --white-color: #fff;
+  --white-color-sec: #f8f5f1;
+  --text-color: #555;
+  --text-gray: #999;
+  --black-color: #000;
+  --primary-font: "Roboto", sans-serif;
+  --secondry-font: "Quicksand", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 100%;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+/* 
+===================================
+    Custom Scrollbar
+===================================
+*/
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+/* 
+===================================
+    Custom css Design
+===================================
+*/
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: var(--secondry-color);
+  line-height: 4.315rem;
+  font-family: var(--secondry-font);
+}
+
+h2 {
+  font-family: var(--secondry-font);
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--secondry-color);
+  line-height: 3rem;
+}
+
+h4 {
+  font-family: var(--secondry-font);
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: var(--secondry-color);
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  font-family: var(--secondry-font);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--secondry-color);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.125rem;
+  color: var(--text-color);
+  font-weight: 500;
+  line-height: 1.75rem;
+  letter-spacing: 1px;
+}
+
+
+.heading {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+  line-height: 4.315rem;
+  font-family: var(--secondry-font);
+  word-spacing: 1rem;
+}
+
+.heading span {
+  color: var(--third-color);
+}
+
+.main-btn {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  line-height: 1.5625rem;
+  background-color: var(--primary-color);
+  border: 0.1875rem solid var(--primary-color);
+  color: var(--white-color);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+  -webkit-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  border-radius: 0.275rem;
+}
+
+.white-btn {
+  padding: 0.625rem 1.875rem;
+  line-height: 25px;
+  background-color: var(--white-color);
+  border: 0.1875rem solid var(--white-color);
+  color: var(--text-color);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+  -webkit-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  border-radius: 0.275rem;
+}
+
+.main-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.white-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.wrapper {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
+.wrapper-sm {
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem;
+}
+
+.text-content {
+  width: 70%;
+  margin: auto;
+}
+
+/* 
+===================================
+    Header Design
+===================================
+*/
+.navbar-toggler:focus {
+  outline: unset;
+  border: unset;
+  box-shadow: none;
+}
+.nav-link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+.navbar a {
+  font-family: var(--secondry-font);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.custom-nav a {
+  color: var(--white-color) !important;
+}
+.custom-nav {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.15);
+  transition: all 0.75s ease-in-out 0s;
+}
+
+/* Change the navbar styling on scroll */
+.scroll-on {
+  background: var(--white-color-sec);
+  box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.35);
+  transition: all 0.45s ease-in-out 0s;
+}
+.scroll-on a {
+  color: var(--primary-color) !important;
+}
+
+/* 
+===================================
+    Progress Bar Design
+===================================
+*/
+/* Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: var(--white-color-sec);
+  transition: all 0.3s ease-out 0s;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  position: absolute;
+  top: 4.7rem;
+  width: 100%;
+  height: 0.235rem;
+  background: var(--white-color);
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 0.235rem;
+  background: #00c1d4;
+  width: 0%;
+}
+
+/* 
+===================================
+    Banner Design
+===================================
+*/
+.home {
+  position: relative;
+  overflow: hidden;
+}
+.top-banner {
+  background: linear-gradient(
+      48deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 121, 110, 1) 60%,
+      rgba(3, 181, 254, 1) 100%
+    )
+    no-repeat center;
+  background-size: cover;
+  padding: 7.375rem 0 9.375rem;
+}
+.home h1,
+.home p {
+  color: var(--white-color);
+}
+.home .white-btn {
+  font-family: var(--secondry-font);
+  font-size: 1.375rem;
+  font-weight: 700;
+  padding: 1rem;
+  text-transform: capitalize;
+  color: var(--secondry-color);
+  margin-bottom: 0.5rem;
+}
+.home .white-btn:hover,
+.home .white-btn:focus {
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+
+/* 
+===================================
+    About Design
+===================================
+*/
+.about-section {
+  background: var(--white-color-sec);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.about-section .logo {
+  height: 9rem;
+}
+.about-section .logo.pd img {
+  position: relative;
+  top: 1.85rem;
+}
+
+/* 
+===================================
+    Explore Design
+===================================
+*/
+.explore {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--secondry-color);
+}
+
+.explore img {
+  width: 75%;
+}
+
+.explore .row button {
+  margin: 8rem 0;
+  border-radius: 2rem;
+  padding: 1.175rem 2rem;
+}
+
+.explore .white-btn {
+  font-family: var(--secondry-font);
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--secondry-color);
+  line-height: 3rem;
+  margin: 8rem 0;
+  border-radius: 2rem;
+  padding: 1.375rem 2rem;
+  transition: all 0.6s ease-out 0s;
+}
+
+.explore .white-btn:hover,
+.explore .white-btn:focus {
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+
+/* 
+===================================
+    Project Design
+===================================
+*/
+.project {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--white-color);
+}
+
+
+
+/* 
+===================================
+    Partners Design
+===================================
+*/
+.partners{
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--white-color-sec);
+}
+.partners .carousel{
+  background: var(--secondry-color);
+  padding: 6rem 3rem 5rem 5.5rem;
+  border-radius: 2rem;
+}
+.partners .carousel-inner{
+  padding: 1rem 3rem 1rem 2rem;
+}
+.partners .carousel-indicators button{
+  width: 15px;
+  height: 15px;
+  outline: none;
+  border-radius: 50%;
+  border: none;
+  margin-right: 1rem;
+  opacity: 0.2;
+}
+.partners .carousel-indicators button.active{
+  opacity: 1;
+}
+.partners .carousel-control-prev,
+.partners .carousel-control-next{
+  opacity: 0;
+}
+.partners .carousel-item img{
+  width: 12rem;
+  height: 12rem;
+}
+
+
+
+/* 
+===================================
+    Footer Design
+===================================
+*/
+
+footer {
+  position: relative;
+}
+
+.footer-distributed {
+  background-color: var(--primary-color);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px var(--secondry-font);
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+.footer-distributed h3 {
+  color: var(--white-color);
+  font: normal 36px var(--secondry-font);
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer-distributed .footer-links {
+  color: var(--white-color);
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit !important;
+}
+
+.footer-distributed .footer-company-name {
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: var(--third-color);
+  color: var(--white-color);
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: var(--white-color);
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: var(--white-color) !important;
+  text-decoration: none;
+}
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: var(--white-color);
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: var(--white-color);
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+
+
+
